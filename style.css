@@ -453,6 +453,13 @@ form .msg {
   padding: 10px 0;
   background-color: var(--primary-color);
 }
+
+.error-message{
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
 /* ------------------------------Mobile and  other devices------------------------------------ */
 @media all and (max-width: 768px) {
   nav {

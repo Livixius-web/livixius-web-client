@@ -3,28 +3,6 @@ var loader = document.querySelector(".loader");
 window.addEventListener("load", () => {
   loader.style.display = "none";
 });
-//------------------------------ form submission -------------------------------------
-let submitBtn = document.querySelector(".mailbtn");
-let submitMsg = document.querySelector(".form");
-
-submitBtn.addEventListener("click", (event) => {
-  var name = document.getElementById("name").value.trim();
-  var mobile = document.getElementById("mobile").value.trim();
-  var email = document.getElementById("email").value.trim();
-
-  if (name === "" || mobile === "" || email === "") {
-    alert("Please fill out all required fields before submission");
-    return;
-  }
-  event.preventDefault();
-  loader.style.display = "flex";
-
-  setTimeout(() => {
-    loader.style.display = "none";
-    submitMsg.innerHTML = `<p class="successMsg">"Your request submitted successfully"</P>`;
-  }, 5000);
-});
-//------------------------------------ send to whatsapp ----------------------------------
 
 function sendToWhatsapp() {
   let number = "+918220997988";
