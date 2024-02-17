@@ -1,0 +1,647 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inter;
+  overflow-x: hidden;
+}
+:root {
+  /* ----------------purple color schema-------------- */
+  /* --primary-color: #ab9ff228;
+  --extralight-color: #ab9ff2d8;
+  --light-color: #8f3aff;
+  --white-color: #f5f2ff;
+  --secondary-color: #ab9ff2;
+  --text-color: #3c315b; */
+  /* ---------------Blue color schema ---------------- */
+  --primary-color: #9fc2f24f;
+  --extralight-color: #9fc2f2d8;
+  --light-color: #163e96;
+  --white-color: #f5f2ff;
+  --secondary-color: #82b5f4;
+  --text-color: #3c315b;
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-color);
+  z-index: 99;
+}
+.loader::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 8px solid var(--extralight-color);
+  border-top-color: var(--light-color);
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#home {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white-color);
+}
+#home button a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+.logo img {
+  width: 200px;
+}
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--white-color);
+  position: fixed;
+  z-index: 50;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+nav h2 {
+  color: var(--light-color);
+  font-size: 30px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  list-style: none;
+}
+nav ul a {
+  text-decoration: none;
+  color: #474747ed;
+  font-weight: 600;
+}
+nav ul a:hover {
+  color: var(--light-color);
+  cursor: pointer;
+}
+nav a.active {
+  color: var(--light-color);
+}
+.menu-line {
+  width: 25px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: var(--light-color);
+  margin-top: 2px;
+}
+.menu .menu-line:nth-child(2) {
+  width: 15px;
+}
+.menu {
+  cursor: pointer;
+  display: none;
+}
+button {
+  color: var(--white-color);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+nav button {
+  background-color: var(--light-color);
+}
+/* ------------Home page----------- */
+.homePage {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.wlcm {
+  width: 100%;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  padding-left: 200px;
+}
+.wlcm h1 {
+  font-size: 2.8rem;
+}
+.wlcm h1 span {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--light-color);
+  cursor: pointer;
+}
+.wlcm h1 span:hover {
+  color: rgb(0, 120, 255);
+}
+.wlcm h2 {
+  line-height: 35px;
+}
+.wlcm button {
+  background-color: var(--light-color);
+  margin-top: 10px;
+}
+.wlcmImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.wlcmImg img {
+  width: 500px;
+  transition: 0.5s;
+}
+.wlcmImg img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.bgAnim1 {
+  width: 700px;
+  height: 1400px;
+  background: linear-gradient(var(--secondary-color), var(--primary-color));
+  z-index: 1;
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  border-radius: 900px 0 0 900px;
+}
+/* ---------------------Features------------------ */
+#features {
+  width: 100%;
+  background-color: var(--white-color);
+  position: relative;
+}
+#features h1 {
+  text-align: center;
+  font-size: 30px;
+  z-index: 4;
+}
+.boxes {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+  margin: 40px 0 80px 0;
+}
+.boxes .box {
+  width: 350px;
+  height: 200px;
+  background-color: #ffffffd3;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+}
+.boxes .box1:hover,
+.box2:hover,
+.box3:hover,
+.box4:hover,
+.box5:hover,
+.box6:hover {
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  color: #fff;
+}
+.boxes .f-head {
+  display: flex;
+  align-items: center;
+}
+.boxes strong {
+  font-size: 20px;
+}
+.boxes .f-foot {
+  padding: 0px 12px;
+  /* text-align: justify; */
+  word-spacing: 0;
+}
+.boxes .icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 10px 20px 10px 10px;
+  background-color: var(--light-color);
+  display: grid;
+  place-items: center;
+}
+.boxes img {
+  width: 40px;
+  filter: invert(100%);
+}
+/* ----------------------About page starts------------------------ */
+#about {
+  width: 100%;
+  background-color: var(--white-color);
+  display: grid;
+  place-items: center;
+}
+#about h1 {
+  text-align: center;
+  font-size: 30px;
+}
+#about .aboutBox {
+  width: 80%;
+  background-color: #ffffffd3;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  position: relative;
+  z-index: 10;
+  margin: 40px 0 80px 0;
+}
+#about .content {
+  width: 100%;
+  padding: 40px;
+  text-align: justify;
+  word-spacing: 2px;
+  line-height: 25px;
+  font-style: italic;
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.content .aboutHead {
+  height: 40px;
+  text-align: center;
+}
+.aboutHead strong {
+  font-size: 25px;
+}
+.content .aboutus {
+  padding-right: 15px;
+}
+.content .whyusHead {
+  height: 40px;
+  text-align: center;
+}
+.content .whyus strong {
+  font-size: 25px;
+}
+.content .whyus {
+  padding-left: 15px;
+  text-align: center;
+}
+#about .circle1,
+.circle2 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 9;
+}
+#about .circle1 {
+  right: 70px;
+  margin-top: 200px;
+  background-color: var(--primary-color);
+}
+#about .circle2 {
+  left: 70px;
+  margin-bottom: 250px;
+  background-color: var(--extralight-color);
+}
+/* ------------------------------Pricing page starts----------------------------------- */
+#pricing {
+  width: 100%;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#pricing h1 {
+  text-align: center;
+  font-size: 30px;
+}
+#pricing .content {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 80px 0;
+}
+#pricing .content strong {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+/* --------------------------------------Contact page starts-------------------------------------------- */
+#contact {
+  width: 100%;
+  background-color: var(--white-color);
+}
+#contact h1 {
+  text-align: center;
+  font-size: 30px;
+}
+#contact .container {
+  width: 100%;
+  height: 100%;
+  margin: 50px 0 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+#contact .form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#contact .form {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form input,
+textarea {
+  padding: 20px 20px;
+  outline: none;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  background: none;
+  background-color: var(--white-color);
+  font-size: 15px;
+}
+form .msg {
+  height: 150px;
+}
+#contact button {
+  margin-top: 10px;
+  background-color: teal;
+  cursor: pointer;
+}
+#contact .mailbtn {
+  background-color: #004ff9;
+  cursor: pointer;
+}
+.successMsg {
+  width: 100%;
+  text-align: center;
+  font-size: 23px;
+  font-style: italic;
+  color: rgb(18, 176, 0);
+}
+#contact .address {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#contact .addressBox {
+  display: flex;
+  flex-direction: column;
+  line-height: 25px;
+}
+.addressBox label {
+  margin-top: 30px;
+}
+.address .iconBox {
+  display: flex;
+  flex-direction: column;
+  padding-right: 30px;
+  margin-top: 20px;
+}
+#contact img {
+  width: 50px;
+}
+#contact img:nth-child(1) {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+#contact img:nth-child(2) {
+  margin-bottom: 20px;
+  padding-top: 5px;
+}
+#contact img:nth-child(3) {
+  margin-top: 10px;
+}
+#contact .logo2 {
+  width: 400px;
+  position: absolute;
+  top: -20px;
+}
+.addressBox a {
+  text-decoration: none;
+}
+.copyrights {
+  text-align: center;
+  padding: 10px 0;
+  background-color: var(--primary-color);
+}
+/* ------------------------------Mobile and  other devices------------------------------------ */
+@media all and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+    display: none;
+  }
+  nav ul li {
+    margin: 20px 0 0 0;
+    transition: 0.5s;
+  }
+  .logo img {
+    width: 150px;
+    padding-top: 10px;
+  }
+  .menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+  .showmenu {
+    display: block;
+    transition: 1s;
+  }
+  nav button {
+    display: none;
+  }
+  .homePage {
+    padding-top: 130px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+  .wlcm {
+    align-items: center;
+    text-align: center;
+    padding: 0px 10px;
+    z-index: 2;
+  }
+  .wlcm h1 {
+    font-size: 1.5rem;
+  }
+  .wlcm h1 span {
+    font-size: 1.8rem;
+  }
+  .wlcm h2 {
+    font-size: 1rem;
+  }
+  .wlcmImg img {
+    padding-right: 30px;
+    padding-top: 10px;
+  }
+  /* .bgAnim1 {
+    display: none;
+  } */
+  .bgAnim1 {
+    width: 200px;
+    height: 400px;
+    background: linear-gradient(var(--secondary-color), var(--primary-color));
+    z-index: 1;
+    top: 45%;
+    right: 0;
+    border-radius: 900px 0 0 900px;
+  }
+
+  /* ---------------------------features page--------------------- */
+  #features h1 {
+    position: relative;
+    z-index: 4;
+  }
+  .boxes {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .boxes .box {
+    width: 90%;
+    height: 160px;
+  }
+  .boxes .icon-circle {
+    width: 50px;
+    height: 50px;
+    margin: 5px 10px 5px 5px;
+  }
+  .boxes img {
+    width: 25px;
+  }
+  .boxes strong {
+    font-size: 15px;
+  }
+  .boxes .box p {
+    font-size: 14px;
+  }
+  /* ---------------------------------about page---------------------- */
+
+  #about .aboutBox {
+    width: 90%;
+    height: auto;
+  }
+  #about .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+  #about .circle {
+    width: 80px;
+    height: 80px;
+  }
+  #about .circle2 {
+    left: 0;
+    margin-bottom: 600px;
+  }
+  #about .circle1 {
+    right: 0;
+    margin-top: 500px;
+  }
+  #about p {
+    font-size: 15px;
+  }
+  /* ---------------------- pricing page-------------------------- */
+  #pricing {
+    height: auto;
+    width: 100%;
+  }
+  #pricing .content {
+    width: 90%;
+    height: auto;
+  }
+  #pricing .content strong {
+    font-size: 20px;
+  }
+  /* -------------------------contact page------------------------- */
+  #contact {
+    height: auto;
+  }
+  #contact .container {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+  #contact .form {
+    width: 100%;
+  }
+  #contact .form form {
+    margin: 0 20px 0 20px;
+    gap: 10px;
+  }
+  .form .form1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .form .form1 input {
+    margin-top: 10px;
+  }
+  form input,
+  textarea {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+  form .msg {
+    height: 100px;
+  }
+  #contact button {
+    align-self: center;
+    margin-top: 5px;
+  }
+  #contact .address {
+    margin-bottom: 20px;
+  }
+  .address strong {
+    font-size: 15px;
+  }
+  #contact img {
+    width: 40px;
+    margin: 0 20px 0 10px;
+  }
+  #contact img:nth-child(1) {
+    margin-bottom: 30px;
+  }
+  #contact .logo2 {
+    display: none;
+  }
+  .successMsg {
+    font-size: 18px;
+  }
+}
