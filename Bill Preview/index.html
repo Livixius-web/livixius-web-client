@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: inter;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        padding: 20px;
+      }
+      /* .container th,
+      .container td {
+        border-top: 2px solid #000;
+      } */
+      .customer-d {
+        width: 100%;
+        height: 10vh;
+        margin: 10px 0;
+      }
+      .second-container {
+        width: 100%;
+        height: 80vh;
+        display: flex;
+      }
+      .second-container table,
+      .second-container th,
+      .second-container td {
+        border: 2px solid #000;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+      .date-table {
+        width: 95%;
+        margin: 20px 0px;
+      }
+      .room-bed {
+        display: flex;
+      }
+      .stayed-details {
+        width: 70%;
+        padding: 10px;
+      }
+      .stayed-details input {
+        border: none;
+        outline: none;
+        background: none;
+      }
+      .stayed-details .roomTransfer {
+        width: 50%;
+        margin: 10px 10px 10px 0;
+      }
+      .roomTransfer div {
+        margin: 10px 130px 0px 0px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .stayed-details .extraBed {
+        margin-top: 10px;
+      }
+      .stayed-details .extraBed div {
+        margin: 10px 0px 0px 0px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .extraBed input {
+        margin-left: 30px;
+      }
+      .bill-details {
+        border: 3px solid #111111;
+        width: 30%;
+        height: 90%;
+        margin-top: 20px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+      .bill-details h3 {
+        margin: 10px 0px;
+        font-size: 22px;
+      }
+      .bill-details div {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .bill-details input {
+        border: none;
+        background: none;
+        outline: none;
+        text-align: end;
+      }
+      .bill-details .gst {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0px;
+      }
+      .gst div {
+        margin-left: 40px;
+      }
+      .bill-details .total {
+        margin-top: 20px;
+      }
+    </style>
+    <title>Bill</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cx-details">
+        <h2>Customer Details</h2>
+        <table class="customer-d">
+          <tr>
+            <th>Customer Name</th>
+            <th>Phone Number</th>
+            <th>Second Number</th>
+            <th>Customer ID</th>
+            <th>PAX</th>
+          </tr>
+          <tr align="center">
+            <td>Prasath Kumar</td>
+            <td>00000 00000</td>
+            <td>00000 00000</td>
+            <td>xxxx xxxx xxxx</td>
+            <td>Adult {}</td>
+            <td>Children{}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="second-container">
+        <div class="stayed-details">
+          <strong>Stayed Details</strong>
+          <table class="date-table">
+            <tr>
+              <th>Date of Check In</th>
+              <th>Time of Check In</th>
+              <th>Date of Check Out</th>
+              <th>Date of Check Out</th>
+            </tr>
+            <tr align="center">
+              <td>01/01/2000</td>
+              <td>09.00 AM</td>
+              <td>01/01/2000</td>
+              <td>09.00 AM</td>
+            </tr>
+          </table>
+          <div>
+            <label for="stayedDaysNo"
+              ><strong>Number of Stayed Days :</strong></label
+            >
+            <input type="text" id="stayedDaysNo" />
+          </div>
+          <div class="room-bed">
+            <div class="roomTransfer">
+              <strong>Room Transfer Details</strong>
+              <div>
+                <label for="roomNo">Previous Room No </label>
+                <input type="text" id="roomNo" />
+              </div>
+              <div>
+                <label for="staydays">Stayed Days </label>
+                <input type="text" id="staydays" />
+              </div>
+              <div>
+                <label for="roomPrice">Previous Room Price </label>
+                <input type="text" id="roomPrice" />
+              </div>
+            </div>
+            <div class="extraBed">
+              <strong>Extra Bed Details</strong>
+              <div>
+                <label for="bedCount">Extra Bed Count </label>
+                <input type="text" id="bedCount" />
+              </div>
+              <div>
+                <label for="bedPrice">Extra Bed Total Price </label>
+                <input type="text" id="bedPrice" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bill-details">
+          <h3>Bill Details</h3>
+          <div>
+            <label>Room Price Per Day</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label>Total Room Price</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label>Extra Bed Price</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label>Discount</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label>Total Before Tax</label>
+            <input type="text" />
+          </div>
+          <div class="gst">
+            <p>GST Details :</p>
+            <div>
+              <label>CGST 9%</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label>SGST 9%</label>
+              <input type="text" />
+            </div>
+          </div>
+          <div>
+            <label><strong>Total after Tax</strong></label>
+            <input type="text" />
+          </div>
+          <div>
+            <label>Previous Room Price</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label>Advance Paid</label>
+            <input type="text" />
+          </div>
+          <div class="total">
+            <label><strong>Total Payable Amount</strong> </label>
+            <input type="text" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
